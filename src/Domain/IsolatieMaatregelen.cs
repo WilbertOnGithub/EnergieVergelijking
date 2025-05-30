@@ -1,8 +1,10 @@
 ﻿namespace Arentheym.EnergieVergelijker.Domain;
 
 [Flags]
+[SuppressMessage("Usage", "CA1008:Enums should have zero value", Justification = "Translated to Dutch.")]
 public enum IsolatieMaatregelen
 {
+    Geen = 0, // Geen isolatie maatregelen
     Glas = 1, // Ramen vervangen door HR++ glas
     Gevel = 2, // Kozijnen / deur vervangen
     Spouwmuur = 4, // Spouwmuur geïsoleerd

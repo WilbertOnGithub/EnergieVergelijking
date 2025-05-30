@@ -89,5 +89,192 @@ public class Vergelijker
                 .WithCommentaar("Gevelisolatie + installatie HR++ glas voor 50% uitgevoerd.")
                 .Build()
         );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("wlv572", 1300, -227)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Ja)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas | IsolatieMaatregelen.Spouwmuur | IsolatieMaatregelen.Dak
+                )
+                .WithCommentaar("16 zonnepanelen aanwezig. HR++ glas slechts deels.")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("9d4wsi", 2000, 4000)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Kruipruimte
+                        | IsolatieMaatregelen.Dak
+                )
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("mh0ivx", 1350, 3400)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.Alleenstaand)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas | IsolatieMaatregelen.Gevel | IsolatieMaatregelen.Spouwmuur
+                )
+                .WithCommentaar("Hele dag schaduw door hoge bomen rondom.")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("nxbvbv", 850, 2700)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(IsolatieMaatregelen.Spouwmuur)
+                .WithCommentaar("Verwarming op 15 - 17 graden overdag. 18 graden in de avond.")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("64euzb", 122, 3458)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Ja)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Gevel | IsolatieMaatregelen.Kruipruimte | IsolatieMaatregelen.Dak
+                )
+                .WithCommentaar("Clusterkieren luchtdicht gemaakt. Klepraampjes deels geïsoleerd.")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("mbfivx", 830, 3609)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Spouwmuur
+                        | IsolatieMaatregelen.Kruipruimte
+                        | IsolatieMaatregelen.Dak
+                )
+                .WithCommentaar("Vanaf 13 november 2023 warmtepomp (full electric) geïnstalleerd.")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("kffb7w", 583, -204)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas | IsolatieMaatregelen.Spouwmuur | IsolatieMaatregelen.Kruipruimte
+                )
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("h9zewn", 1391, 2526)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Spouwmuur
+                        | IsolatieMaatregelen.Kruipruimte
+                        | IsolatieMaatregelen.Dak
+                )
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("iegklw", 694, 3276)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Spouwmuur
+                        | IsolatieMaatregelen.Kruipruimte
+                        | IsolatieMaatregelen.Dak
+                )
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("5fdg0x", 900, 2600)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Ja)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Spouwmuur
+                        | IsolatieMaatregelen.Dak
+                )
+                .WithCommentaar("8 zonnepanelen (300 Watt piek), 280 liter zonneboiler, triple glas (HR+++)")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("wyj572", 5600, 8000)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Ja)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Kruipruimte
+                        | IsolatieMaatregelen.Dak
+                )
+                .WithCommentaar("Electrische auto. Zwembad.")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("2hzwor", 529, 4292)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Spouwmuur
+                        | IsolatieMaatregelen.Kruipruimte
+                        | IsolatieMaatregelen.Dak
+                )
+                .WithCommentaar(
+                    "22 zonnepanelen. Electrische auto. 1 warmtepomp + backup CV (voor warm water)."
+                        + Environment.NewLine
+                        + "10440 KWh verbruikt maar 6148 zelf opgewekt."
+                )
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("qaj9o3", 1105, -845)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas | IsolatieMaatregelen.Kruipruimte | IsolatieMaatregelen.Dak
+                )
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("s0ehem", 2000, 1600)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.Alleenstaand)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(IsolatieMaatregelen.Geen)
+                .Build()
+        );
     }
 }
