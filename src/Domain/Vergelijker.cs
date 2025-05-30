@@ -2,7 +2,7 @@
 
 public class Vergelijker
 {
-    private List<ClusterWoning> _clusterWoningen = new List<ClusterWoning>();
+    private readonly List<ClusterWoning> _clusterWoningen = [];
 
     public Vergelijker()
     {
@@ -38,7 +38,7 @@ public class Vergelijker
             query = query.Where(x => x.WoningType == filter.WoningType.Value);
         }
 
-        if (filter.IsolatieMaatregelen != IsolatieMaatregelen.Geen)
+        if (filter.IsolatieMaatregelen.HasValue)
         {
             // Return all ClusterWoningen where at least one of the selected measures is present
             query = query.Where(w => (w.IsolatieMaatregelen & filter.IsolatieMaatregelen) != 0);

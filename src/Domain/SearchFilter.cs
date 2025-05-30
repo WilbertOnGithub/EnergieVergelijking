@@ -5,6 +5,6 @@ public class SearchFilter
     public WoningType? WoningType { get; set; }
     public AantalWoonlagen? AantalWoonlagen { get; set; }
     public GebruikOpenHaard? GebruikOpenHaard { get; set; }
-    public IsolatieMaatregelen IsolatieMaatregelen { get; set; } = IsolatieMaatregelen.Geen;
+    public IsolatieMaatregelen? IsolatieMaatregelen { get; set; }
     public Gezinssituatie? Gezinssituatie { get; set; }
 }
