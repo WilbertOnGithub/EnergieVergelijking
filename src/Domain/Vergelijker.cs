@@ -44,6 +44,16 @@ public class Vergelijker
             query = query.Where(w => (w.IsolatieMaatregelen & filter.IsolatieMaatregelen) != 0);
         }
 
+        if (filter.KiloWattUur != null)
+        {
+            query = query.Where(x => filter.KiloWattUur.Contains(x.KiloWattUur));
+        }
+
+        if (filter.KubiekeMeterGas != null)
+        {
+            query = query.Where(x => filter.KubiekeMeterGas.Contains(x.KubiekeMeterGas));
+        }
+
         return query.ToList().AsReadOnly();
     }
 

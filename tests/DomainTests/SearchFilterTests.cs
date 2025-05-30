@@ -51,6 +51,38 @@ public class SearchFilterTests
         var result = sut.Search(filter);
 
         // Assert
-        result.Count.Should().Be(27);
+        result.Count.Should().Be(6);
+    }
+
+    [Theory]
+    [InlineData(0, 0)]
+    [InlineData(20_000, 20_000)]
+    public void Search_With_Extreme_KwhRange_Should_Not_Return_Results(int min, int max)
+    {
+        // Arrange
+        var sut = new Vergelijker();
+        SearchFilter filter = new() { KiloWattUur = new Range<int>(min, max) };
+
+        // Act
+        var result = sut.Search(filter);
+
+        // Assert
+        result.Count.Should().Be(0);
+    }
+
+    [Theory]
+    [InlineData(0, 0)]
+    [InlineData(20_000, 20_000)]
+    public void Search_With_Extreme_GasUsage_Should_Not_Return_Results(int min, int max)
+    {
+        // Arrange
+        var sut = new Vergelijker();
+        SearchFilter filter = new() { KubiekeMeterGas = new Range<int>(min, max) };
+
+        // Act
+        var result = sut.Search(filter);
+
+        // Assert
+        result.Count.Should().Be(0);
     }
 }
