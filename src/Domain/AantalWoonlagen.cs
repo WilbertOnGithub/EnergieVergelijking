@@ -6,5 +6,5 @@
 public enum AantalWoonlagen
 {
     Twee,
-    Drie
+    Drie,
 }

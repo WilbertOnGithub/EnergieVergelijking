@@ -6,5 +6,5 @@
 public enum WoningType
 {
     TussenWoning,
-    HoekWoning
+    HoekWoning,
 }

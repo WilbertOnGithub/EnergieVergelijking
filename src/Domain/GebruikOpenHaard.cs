@@ -6,5 +6,5 @@
 public enum GebruikOpenHaard
 {
     Ja,
-    Nee     // Of geen open haard
+    Nee, // Of geen open haard
 }

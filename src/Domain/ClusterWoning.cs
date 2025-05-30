@@ -21,24 +21,29 @@ public class ClusterWoning(string code, int kiloWattUur, int kubiekeMeterGas)
     /// Uitgevoerde isolatie maatregelen
     /// </summary>
     public IsolatieMaatregelen IsolatieMaatregelen { get; set; }
-    
+
     /// <summary>
     /// Gezinssituatie van de bewoners
     /// </summary>
     public Gezinssituatie Gezinssituatie { get; set; }
-    
+
     /// <summary>
     /// Gebruikt een open haard
     /// </summary>
     public GebruikOpenHaard GebruikOpenHaard { get; set; }
-    
+
     /// <summary>
     /// Het type woning
     /// </summary>
     public WoningType WoningType { get; set; }
-    
+
     /// <summary>
     /// Aantal woonlagen
     /// </summary>
     public AantalWoonlagen AantalWoonlagen { get; set; }
+
+    /// <summary>
+    /// Eventueel extra commentaar
+    /// </summary>
+    public string Commentaar { get; set; } = String.Empty;
 }
