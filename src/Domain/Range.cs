@@ -3,11 +3,9 @@
 public class Range<T>
     where T : IComparable<T>
 {
-    public T? Min { get; }
+    private T? Min { get; }
 
-    public T? Max { get; }
-
-    public bool HasValue => Min != null && Max != null;
+    private T? Max { get; }
 
     public Range(T? min, T? max)
     {
