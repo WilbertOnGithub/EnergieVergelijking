@@ -9,6 +9,44 @@ public class Vergelijker
         Seed();
     }
 
+    public bool CodeExists(string code)
+    {
+        return _clusterWoningen.FirstOrDefault(x => x.Code.Equals(code, StringComparison.OrdinalIgnoreCase)) != null;
+    }
+
+    public IReadOnlyList<ClusterWoning> Search([NotNull] SearchFilter filter)
+    {
+        var query = _clusterWoningen.AsQueryable();
+
+        if (filter.AantalWoonlagen.HasValue)
+        {
+            query = query.Where(x => x.AantalWoonlagen == filter.AantalWoonlagen.Value);
+        }
+
+        if (filter.GebruikOpenHaard.HasValue)
+        {
+            query = query.Where(x => x.GebruikOpenHaard == filter.GebruikOpenHaard.Value);
+        }
+
+        if (filter.Gezinssituatie.HasValue)
+        {
+            query = query.Where(x => x.Gezinssituatie == filter.Gezinssituatie.Value);
+        }
+
+        if (filter.WoningType.HasValue)
+        {
+            query = query.Where(x => x.WoningType == filter.WoningType.Value);
+        }
+
+        if (filter.IsolatieMaatregelen != IsolatieMaatregelen.Geen)
+        {
+            // Return all ClusterWoningen where at least one of the selected measures is present
+            query = query.Where(w => (w.IsolatieMaatregelen & filter.IsolatieMaatregelen) != 0);
+        }
+
+        return query.ToList().AsReadOnly();
+    }
+
     private void Seed()
     {
         _clusterWoningen.Add(
