@@ -1,0 +1,10 @@
+﻿<Project>
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Arentheym.EnergieVergelijker</RootNamespace>
+        <AnalysisLevel>latest-all</AnalysisLevel>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+</Project>
