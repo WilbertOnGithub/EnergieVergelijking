@@ -276,5 +276,91 @@ public class Vergelijker
                 .WithIsolatieMaatregelen(IsolatieMaatregelen.Geen)
                 .Build()
         );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("l4yayf", 1300, -583)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(IsolatieMaatregelen.Kruipruimte)
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("jst3ug", 1123, 3508)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Spouwmuur | IsolatieMaatregelen.Kruipruimte | IsolatieMaatregelen.Dak
+                )
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("uwin5s", 1387, 3249)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Ja)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Gevel | IsolatieMaatregelen.Spouwmuur | IsolatieMaatregelen.Kruipruimte
+                )
+                .WithCommentaar("Gevelisolatie alleen achter.")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("8nyg0s", 764, 2151)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas | IsolatieMaatregelen.Gevel | IsolatieMaatregelen.Spouwmuur
+                )
+                .WithCommentaar("Hybride plugin auto")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("ycnm5x", 1400, 1300)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.HoekWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Spouwmuur
+                        | IsolatieMaatregelen.Kruipruimte
+                )
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("r0wpu6", 1030, 1669)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas | IsolatieMaatregelen.Gevel | IsolatieMaatregelen.Kruipruimte
+                )
+                .WithCommentaar("Incidenteel gebruik van gashaard. Incidenteel gebruik van elektrische bijverwarming.")
+                .Build()
+        );
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("w4i572", 1368, 631)
+                .WithAantalWoonlagen(AantalWoonlagen.Drie)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.Gezin)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Spouwmuur
+                        | IsolatieMaatregelen.Kruipruimte
+                        | IsolatieMaatregelen.Dak
+                )
+                .WithCommentaar("Zonnepanelen. Electrische auto.")
+                .Build()
+        );
     }
 }
