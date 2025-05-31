@@ -90,7 +90,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("5medg0", 1389, 3315)
+            new ClusterWoningBuilder("5medg0", 3315, 1389)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -104,7 +104,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("uln5sq", 850, 1100)
+            new ClusterWoningBuilder("uln5sq", 1100, 850)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -118,7 +118,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("7ze6tr", 612, 3163)
+            new ClusterWoningBuilder("7ze6tr", 3163, 612)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -134,7 +134,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("zfs4m7", 248, 1689)
+            new ClusterWoningBuilder("zfs4m7", 1689, 248)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.Alleenstaand)
@@ -144,7 +144,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("nafvbv", 1048, 1921)
+            new ClusterWoningBuilder("nafvbv", 1921, 1048)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -154,7 +154,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("wlv572", 1300, -227)
+            new ClusterWoningBuilder("wlv572", -227, 1300)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -166,7 +166,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("9d4wsi", 2000, 4000)
+            new ClusterWoningBuilder("9d4wsi", 4000, 2000)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -180,7 +180,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("mh0ivx", 1350, 3400)
+            new ClusterWoningBuilder("mh0ivx", 3400, 1350)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.Alleenstaand)
@@ -192,7 +192,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("nxbvbv", 850, 2700)
+            new ClusterWoningBuilder("nxbvbv", 2700, 850)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -202,7 +202,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("64euzb", 122, 3458)
+            new ClusterWoningBuilder("64euzb", 3458, 122)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -214,7 +214,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("mbfivx", 830, 3609)
+            new ClusterWoningBuilder("mbfivx", 3609, 830)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -230,7 +230,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("kffb7w", 583, -204)
+            new ClusterWoningBuilder("kffb7w", -204, 583)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -241,7 +241,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("h9zewn", 1391, 2526)
+            new ClusterWoningBuilder("h9zewn", 2526, 1391)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -256,7 +256,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("iegklw", 694, 3276)
+            new ClusterWoningBuilder("iegklw", 3276, 694)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -271,7 +271,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("5fdg0x", 900, 2600)
+            new ClusterWoningBuilder("5fdg0x", 2600, 900)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -286,7 +286,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("wyj572", 5600, 8000)
+            new ClusterWoningBuilder("wyj572", 8000, 5600)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -301,7 +301,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("2hzwor", 529, 4292)
+            new ClusterWoningBuilder("2hzwor", 4292, 529)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -321,7 +321,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("qaj9o3", 1105, -845)
+            new ClusterWoningBuilder("qaj9o3", -845, 1105)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -332,7 +332,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("s0ehem", 2000, 1600)
+            new ClusterWoningBuilder("s0ehem", 1600, 2000)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.Alleenstaand)
@@ -341,7 +341,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("l4yayf", 1300, -583)
+            new ClusterWoningBuilder("l4yayf", -583, 1300)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -350,7 +350,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("jst3ug", 1123, 3508)
+            new ClusterWoningBuilder("jst3ug", 3508, 1123)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -361,7 +361,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("uwin5s", 1387, 3249)
+            new ClusterWoningBuilder("uwin5s", 3249, 1387)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
@@ -373,7 +373,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("8nyg0s", 764, 2151)
+            new ClusterWoningBuilder("8nyg0s", 2151, 764)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -385,7 +385,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("ycnm5x", 1400, 1300)
+            new ClusterWoningBuilder("ycnm5x", 1300, 1400)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.HoekWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -399,7 +399,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("r0wpu6", 1030, 1669)
+            new ClusterWoningBuilder("r0wpu6", 1669, 1030)
                 .WithAantalWoonlagen(AantalWoonlagen.Twee)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.TweePersonen)
@@ -411,7 +411,7 @@ public class Vergelijker
                 .Build()
         );
         _clusterWoningen.Add(
-            new ClusterWoningBuilder("w4i572", 1368, 631)
+            new ClusterWoningBuilder("w4i572", 631, 1368)
                 .WithAantalWoonlagen(AantalWoonlagen.Drie)
                 .WithWoningType(WoningType.TussenWoning)
                 .WithGezinsSituatie(Gezinssituatie.Gezin)
