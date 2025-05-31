@@ -4,5 +4,6 @@
         <Nullable>enable</Nullable>
         <AnalysisLevel>latest-all</AnalysisLevel>
         <ImplicitUsings>enable</ImplicitUsings>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
 </Project>
