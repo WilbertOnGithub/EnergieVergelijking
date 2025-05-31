@@ -426,5 +426,23 @@ public class Vergelijker
                 .WithCommentaar("Zonnepanelen. Electrische auto.")
                 .Build()
         );
+
+        // Eigen woning - Beethovenlaan 80
+        _clusterWoningen.Add(
+            new ClusterWoningBuilder("n5lvbv", 2625, 875)
+                .WithAantalWoonlagen(AantalWoonlagen.Twee)
+                .WithWoningType(WoningType.TussenWoning)
+                .WithGezinsSituatie(Gezinssituatie.TweePersonen)
+                .WithOpenHaard(GebruikOpenHaard.Nee)
+                .WithIsolatieMaatregelen(
+                    IsolatieMaatregelen.Glas
+                        | IsolatieMaatregelen.Gevel
+                        | IsolatieMaatregelen.Spouwmuur
+                        | IsolatieMaatregelen.Kruipruimte
+                        | IsolatieMaatregelen.Dak
+                )
+                .WithCommentaar("Zonnepanelen. Electrische auto.")
+                .Build()
+        );
     }
 }
