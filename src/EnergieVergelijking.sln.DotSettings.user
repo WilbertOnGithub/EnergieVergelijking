@@ -4,5 +4,7 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::1F20DCE8-ACA8-4D8A-93A8-9CA02A9862A1::net9.0::DomainTests.SearchFilterTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::D9645DDD-2328-49E9-B566-B714532BA636::net9.0::ApplicationTests.MapperTests.SearchFilterDto_To_SearchFilter_Should_Map_Correctly&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F20DCE8-ACA8-4D8A-93A8-9CA02A9862A1::net9.0::DomainTests.LoginTests.Using_Unknown_Code_Returns_False&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1F20DCE8-ACA8-4D8A-93A8-9CA02A9862A1::net9.0::DomainTests.LoginTests.Using_Known_Code_Returns_True&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
