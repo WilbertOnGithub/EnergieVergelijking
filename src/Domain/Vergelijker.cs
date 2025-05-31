@@ -3,6 +3,8 @@
 public class Vergelijker
 {
     private readonly List<ClusterWoning> _clusterWoningen = [];
+    private bool _loggedIn;
+    private string _code = string.Empty;
 
     public Vergelijker()
     {
@@ -11,7 +13,10 @@ public class Vergelijker
 
     public bool CodeExists(string code)
     {
-        return _clusterWoningen.FirstOrDefault(x => x.Code.Equals(code, StringComparison.OrdinalIgnoreCase)) != null;
+        _code = code;
+        _loggedIn =
+            _clusterWoningen.FirstOrDefault(x => x.Code.Equals(code, StringComparison.OrdinalIgnoreCase)) != null;
+        return _loggedIn;
     }
 
     public IReadOnlyList<ClusterWoning> Search([NotNull] SearchFilter filter)
@@ -54,7 +59,18 @@ public class Vergelijker
             query = query.Where(x => filter.KubiekeMeterGas.Contains(x.KubiekeMeterGas));
         }
 
-        return query.ToList().AsReadOnly();
+        if (!_loggedIn)
+        {
+            return query.ToList().AsReadOnly();
+        }
+
+        // Haal eigen woning uit zoekresultaat en plaats deze als eerste in de lijst
+        var result = query.ToList();
+        var eigenWoning = _clusterWoningen.Single(x => x.Code == _code);
+        result.Remove(eigenWoning);
+        result.Insert(0, eigenWoning);
+
+        return result.ToList().AsReadOnly();
     }
 
     private void Seed()

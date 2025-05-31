@@ -85,4 +85,41 @@ public class SearchFilterTests
         // Assert
         result.Count.Should().Be(0);
     }
+
+    [Theory]
+    [InlineData(0, 0)]
+    public void Search_With_Extreme_GasUsage_When_Logged_In_Should_Only_Return_Own_Home(int min, int max)
+    {
+        // Arrange
+        const string code = "w4i572";
+
+        var sut = new Vergelijker();
+        sut.CodeExists(code);
+        SearchFilter filter = new() { KubiekeMeterGas = new Range<int>(min, max) };
+
+        // Act
+        var result = sut.Search(filter);
+
+        // Assert
+        result.Count.Should().Be(1);
+        result[0].Code.Should().Be(code);
+    }
+
+    [Fact]
+    public void Searching_When_Logged_In_Should_Put_Own_Home_First()
+    {
+        // Arrange
+        const string code = "w4i572";
+
+        var sut = new Vergelijker();
+        sut.CodeExists(code);
+        SearchFilter filter = new();
+
+        // Act
+        var result = sut.Search(filter);
+
+        // Assert
+        result.Count.Should().Be(27);
+        result[0].Code.Should().Be(code);
+    }
 }
