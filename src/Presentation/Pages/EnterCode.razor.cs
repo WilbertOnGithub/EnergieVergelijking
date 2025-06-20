@@ -5,10 +5,10 @@ namespace Presentation.Pages;
 public partial class EnterCode : ComponentBase
 {
     [Inject]
-    public required Application.Login Login { get; set; }
+    private Application.Login Login { get; set; } = null!;
 
     [Inject]
-    public required NavigationManager Navigation { get; set; }
+    private NavigationManager Navigation { get; set; } = null!;
 
     private string Code { get; set; } = string.Empty;
     private string ErrorMessage { get; set; } = string.Empty;
