@@ -2,8 +2,14 @@
 
 namespace Presentation.Pages;
 
-public partial class Login : ComponentBase
+public partial class EnterCode : ComponentBase
 {
+    [Inject]
+    public required Application.Login Login { get; set; }
+
+    [Inject]
+    public required NavigationManager Navigation { get; set; }
+
     private string Code { get; set; } = string.Empty;
     private string ErrorMessage { get; set; } = string.Empty;
 
@@ -12,7 +18,15 @@ public partial class Login : ComponentBase
         if (string.IsNullOrWhiteSpace(Code))
         {
             ErrorMessage = "Uw code is leeg.";
+            return;
         }
+        if (!Login.CodeExists(Code))
+        {
+            ErrorMessage = "Onbekende code.";
+            return;
+        }
+
+        Navigation.NavigateTo("/energievergelijking/");
     }
 
     private void HandleReset()

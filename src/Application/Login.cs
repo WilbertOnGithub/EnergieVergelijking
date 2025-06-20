@@ -9,9 +9,17 @@ public class Login
     private readonly ClusterWoningMapper _clusterWoningMapper = new();
     private readonly SearchFilterMapper _searchFilterMapper = new();
 
+    public string Code { get; set; } = string.Empty;
+
     public bool CodeExists(string code)
     {
-        return _vergelijker.CodeExists(code);
+        if (!_vergelijker.CodeExists(code))
+        {
+            return false;
+        }
+
+        Code = code;
+        return true;
     }
 
     public IReadOnlyList<ClusterWoningDto> Search(SearchFilterDto searchFilterDto)
