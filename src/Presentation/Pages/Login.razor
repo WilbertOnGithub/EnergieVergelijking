@@ -3,17 +3,30 @@
 
 <PageTitle>Login</PageTitle>
 
-<EditForm Model="@this" OnSubmit="@HandleSubmit">
-    <div class="mb-3" style="width: 20rem">
-        <label class="form-label">
-            Unieke code invoeren
-        </label>
-        <InputText @bind-Value="UniqueCode"
-                   class="form-control ps-3"
-                   placeholder="Geef uw unieke code in"/>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Code invoeren</h2>
+
+                    <form @onsubmit="HandleSubmit" @onsubmit:preventDefault="true">
+                        <div class="mb-3">
+                            <label for="uniqueCode" class="form-label">Code</label>
+                            <input type="text" class="form-control" id="uniqueCode" @bind="Code" placeholder="Geef uw unieke code in"/>
+                        </div>
+                        @if (!string.IsNullOrEmpty(ErrorMessage))
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                <span class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></span>
+                                @ErrorMessage
+                            </div>
+                        }
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="button" class="btn btn-primary" @onclick="HandleReset">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <button type="submit" class="btn btn-primary">Invoeren</button>
-        <button type="reset" class="btn btn-secondary">Leegmaken</button>
-    </div>
-</EditForm>
+</div>

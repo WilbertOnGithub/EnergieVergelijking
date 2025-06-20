@@ -4,14 +4,20 @@ namespace Presentation.Pages;
 
 public partial class Login : ComponentBase
 {
-    public string UniqueCode { get; set; } = string.Empty;
-    public string ErrorMessage { get; set; } = string.Empty;
+    private string Code { get; set; } = string.Empty;
+    private string ErrorMessage { get; set; } = string.Empty;
 
     private void HandleSubmit()
     {
-        if (string.IsNullOrWhiteSpace(UniqueCode))
+        if (string.IsNullOrWhiteSpace(Code))
         {
             ErrorMessage = "Uw code is leeg.";
         }
+    }
+
+    private void HandleReset()
+    {
+        ErrorMessage = string.Empty;
+        Code = string.Empty;
     }
 }
