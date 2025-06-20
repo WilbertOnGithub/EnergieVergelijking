@@ -1,15 +1,11 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using System.Diagnostics.CodeAnalysis;
+
+using Microsoft.AspNetCore.Components;
 
 namespace Presentation.Pages;
 
-public partial class EnterCode : ComponentBase
+public partial class EnterCode(NavigationManager navigationManager, Application.Login login) : ComponentBase
 {
-    [Inject]
-    private Application.Login Login { get; set; } = null!;
-
-    [Inject]
-    private NavigationManager Navigation { get; set; } = null!;
-
     private string Code { get; set; } = string.Empty;
     private string ErrorMessage { get; set; } = string.Empty;
 
@@ -20,13 +16,13 @@ public partial class EnterCode : ComponentBase
             ErrorMessage = "Uw code is leeg.";
             return;
         }
-        if (!Login.CodeExists(Code))
+        if (!login.CodeExists(Code))
         {
             ErrorMessage = "Onbekende code.";
             return;
         }
 
-        Navigation.NavigateTo("/energievergelijking/");
+        navigationManager.NavigateTo("/energievergelijking/");
     }
 
     private void HandleReset()
