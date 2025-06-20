@@ -10,5 +10,7 @@ indent_style = space
 indent_size = 4
 max_line_length = 120
 
-dotnet_diagnostic.CA2007.severity = suggestion # Consider calling ConfigureAwait on the awaited task (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2007)
-dotnet_diagnostic.CA1848.severity = suggestion # For improved performance, use the LoggerMessage delegates instead of calling 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])' (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1848)
+dotnet_diagnostic.CA2007.severity = suggestion  # Consider calling ConfigureAwait on the awaited task (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2007)
+dotnet_diagnostic.CA1848.severity = suggestion  # For improved performance, use the LoggerMessage delegates instead of calling 'LoggerExtensions.LogInformation(ILogger, string?, params object?[])' (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1848)
+# Not relevant for Blazor projects
+dotnet_diagnostic.CA1515.severity = none        # Consider making public types internal
