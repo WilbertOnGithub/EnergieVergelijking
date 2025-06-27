@@ -4,16 +4,16 @@ using Microsoft.AspNetCore.Components;
 
 namespace Arentheym.EnergieVergelijker.Presentation.Pages;
 
-public partial class Chart : ComponentBase
+public partial class Chart(Login login) : ComponentBase
 {
-    private List<ClusterWoningDto> Woningen { get; set; } = [];
+    private IReadOnlyList<ClusterWoningDto> Woningen { get; set; } = [];
 
     [Parameter]
     public SearchFilterDto FilterSelection { get; set; } = new();
 
     protected override void OnInitialized()
     {
-        Woningen.Add(new ClusterWoningDto("foo", 1000, 2000));
+        Woningen = login.Search(FilterSelection);
     }
 
     protected override void OnParametersSet()
