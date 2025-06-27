@@ -13,4 +13,11 @@ public partial class Filter : ComponentBase
     private GebruikOpenHaardDto? SelectedGebruikOpenHaard { get; set; }
 
     private GezinssituatieDto? SelectedGezinsSituatie { get; set; }
+
+    private IsolatieMaatregelenDto SelectedIsolatieMaatregelen { get; set; }
+
+    private void ToggleIsolatieMaatregel(IsolatieMaatregelenDto maatregel)
+    {
+        SelectedIsolatieMaatregelen ^= maatregel;
+    }
 }
