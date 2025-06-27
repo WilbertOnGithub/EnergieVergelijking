@@ -17,6 +17,11 @@ public partial class Chart : ComponentBase
         Data.Add(new MyData { Category = "Feb", NetProfit = 43, Revenue = 42 });
         Data.Add(new MyData { Category = "Mar", NetProfit = 112, Revenue = 23 });
     }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine(FilterSelection);
+    }
 }
 
 public class MyData
