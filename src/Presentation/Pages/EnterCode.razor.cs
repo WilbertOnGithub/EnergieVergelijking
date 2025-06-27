@@ -22,7 +22,7 @@ public partial class EnterCode(NavigationManager navigationManager, Application.
             return;
         }
 
-        navigationManager.NavigateTo("/energievergelijking/");
+        navigationManager.NavigateTo("/filter/");
     }
 
     private void HandleReset()

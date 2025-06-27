@@ -2,7 +2,7 @@
 
 namespace Presentation.Pages;
 
-public partial class EnergyUsageChart : ComponentBase
+public partial class Filter : ComponentBase
 {
 
 }
