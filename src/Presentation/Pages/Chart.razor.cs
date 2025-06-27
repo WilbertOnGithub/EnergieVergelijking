@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace Presentation.Pages;
+namespace Arentheym.EnergieVergelijker.Presentation.Pages;
 
 public partial class Chart : ComponentBase
 {
 }
-

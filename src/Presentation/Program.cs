@@ -1,6 +1,7 @@
 using ApexCharts;
 
 using Arentheym.EnergieVergelijker.Application;
+using Arentheym.EnergieVergelijker.Presentation;
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
