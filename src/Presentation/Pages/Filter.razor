@@ -3,77 +3,77 @@
 
 <PageTitle>Filter</PageTitle>
 
-<div class="container-fluid mb-4">
-    <div class="border rounded p-4 bg-light">
-        <div class="row">
-            <div class="col-12">
-                <h4 class="mb-2 text-center">Filter resultaten</h4>
-                <p class="text-muted mb-3 small">
-                    Gebruik onderstaande filters om te vergelijken met uw eigen woning. Het filteren is inclusief,
-                    hoe uitgebreider uw selectie, hoe beperkter de resultaten.
+<div class="container-fluid border rounded p-3">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-2 text-center">Filter resultaten</h4>
+            <p class="text-muted mb-3 small">
+                Gebruik onderstaande filters om te vergelijken met uw eigen woning. Het filteren is inclusief,
+                hoe uitgebreider uw selectie, hoe beperkter de resultaten.
 
-                    M.a.w. als u filtert op 2 woonlagen en open haard gebruik, dan zal de resultaten alleen de woningen
-                    bevatten waarin 2 woonlagen zitten die de open haard gebruiken.
-                </p>
-            </div>
+                M.a.w. als u filtert op 2 woonlagen en open haard gebruik, dan zal de resultaten alleen de woningen
+                bevatten waarin 2 woonlagen zitten die de open haard gebruiken.
+            </p>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+            <label for="woningType" class="form-label">Type woning</label>
+            <select id="woningType" class="form-select p-2" @bind="SelectedWoningType">
+                <option value="">-- Selecteer een type --</option>
+                @foreach (var type in Enum.GetValues<WoningTypeDto>())
+                {
+                    <option value="@type">@type.GetDescription()</option>
+                }
+            </select>
         </div>
 
-        <div class="row g-3">
-            <div class="col-md-6 col-lg-4">
-                <label for="woningType" class="form-label">Type woning</label>
-                <select id="woningType" class="form-select p-2" @bind="SelectedWoningType">
-                    <option value="">-- Selecteer een type --</option>
-                    @foreach (var type in Enum.GetValues<WoningTypeDto>())
-                    {
-                        <option value="@type">@type.GetDescription()</option>
-                    }
-                </select>
-            </div>
-
-            <!-- Add more filter controls here following the same pattern -->
-            <div class="col-md-6 col-lg-4">
-                <label for="aantalWoonlagen" class="form-label">Aantal woonlagen</label>
-                <select id="aantalWoonlagen" class="form-select p-2" @bind="SelectedAantalWoonlagen">
-                    <option value="">-- Selecteer aantal --</option>
-                    @foreach (var type in Enum.GetValues<AantalWoonlagenDto>())
-                    {
-                        <option value="@type">@type.GetDescription()</option>
-                    }
-                </select>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <label for="gebruikOpenHaard" class="form-label">Gebruik open haard</label>
-                <select id="gebruikOpenHaard" class="form-select p-2" @bind="SelectedGebruikOpenHaard">
-                    <option value="">-- Selecteer gebruik --</option>
-                    @foreach (var type in Enum.GetValues<GebruikOpenHaardDto>())
-                    {
-                        <option value="@type">@type.GetDescription()</option>
-                    }
-                </select>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <label for="gezinssituatie" class="form-label">Gezinssituatie</label>
-                <select id="gezinssituatie" class="form-select p-2" @bind="SelectedGezinsSituatie">
-                    <option value="">-- Selecteer gebruik --</option>
-                    @foreach (var type in Enum.GetValues<GezinssituatieDto>())
-                    {
-                        <option value="@type">@type.GetDescription()</option>
-                    }
-                </select>
-            </div>
+        <!-- Add more filter controls here following the same pattern -->
+        <div class="col-md-6 col-lg-4">
+            <label for="aantalWoonlagen" class="form-label">Aantal woonlagen</label>
+            <select id="aantalWoonlagen" class="form-select p-2" @bind="SelectedAantalWoonlagen">
+                <option value="">-- Selecteer aantal --</option>
+                @foreach (var type in Enum.GetValues<AantalWoonlagenDto>())
+                {
+                    <option value="@type">@type.GetDescription()</option>
+                }
+            </select>
         </div>
 
-        <div class="row mt-3">
-            <div class="col-12">
-                <button type="button" class="btn btn-primary me-2">Toepassen</button>
-                <button type="button" class="btn btn-secondary">Reset</button>
-            </div>
+        <div class="col-md-6 col-lg-4">
+            <label for="gebruikOpenHaard" class="form-label">Gebruik open haard</label>
+            <select id="gebruikOpenHaard" class="form-select p-2" @bind="SelectedGebruikOpenHaard">
+                <option value="">-- Selecteer gebruik --</option>
+                @foreach (var type in Enum.GetValues<GebruikOpenHaardDto>())
+                {
+                    <option value="@type">@type.GetDescription()</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <label for="gezinssituatie" class="form-label">Gezinssituatie</label>
+            <select id="gezinssituatie" class="form-select p-2" @bind="SelectedGezinsSituatie">
+                <option value="">-- Selecteer gebruik --</option>
+                @foreach (var type in Enum.GetValues<GezinssituatieDto>())
+                {
+                    <option value="@type">@type.GetDescription()</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <button type="button" class="btn btn-primary me-2">Toepassen</button>
+            <button type="button" class="btn btn-secondary">Reset</button>
         </div>
     </div>
 </div>
 
-<Chart>
+<div class="container-fluid border rounded p-3 mt-4">
+    <Chart>
 
-</Chart>
+    </Chart>
+</div>
