@@ -1,20 +1,29 @@
 ﻿@using ApexCharts
-<h3>Chart</h3>
+@using Arentheym.EnergieVergelijker.Application
 
-<ApexChart TItem="MyData"
-           Title="Sample Data">
+<ApexChart TItem="ClusterWoningDto" Title="Energiegebruik">
 
-    <ApexPointSeries TItem="MyData"
-                     Items="Data"
-                     Name="Net Profit"
+    <ApexPointSeries TItem="ClusterWoningDto"
+                     Items="Woningen"
+                     Name="Kilowattuur"
                      SeriesType="SeriesType.Bar"
-                     XValue="e => e.Category"
-                     YValue="e=> e.NetProfit" />
-
-    <ApexPointSeries TItem="MyData"
-                     Items="Data"
-                     Name="Revenue"
+                     XValue="@(e => e.Code)"
+                     YValue="@(e => e.KiloWattUur)" />
+    <ApexPointSeries TItem="ClusterWoningDto"
+                     Items="Woningen"
+                     Name="Kubieke meter gas"
                      SeriesType="SeriesType.Bar"
-                     XValue="e => e.Category"
-                     YValue="e=> e.Revenue" />
+                     XValue="@(e => e.Code)"
+                     YValue="@(e => e.KubiekeMeterGas)" />
+
+    <!--
+    <ApexPointSeries TItem="Order"
+                     Items="Orders"
+                     Name="Net Value"
+                     XValue="@(e => e.Country)"
+                     YAggregate="@(e => e.Sum(e => e.NetValue))"
+                     OrderByDescending="e=>e.Y"
+                     SeriesType="SeriesType.Bar"/>
+                     -->
+
 </ApexChart>
