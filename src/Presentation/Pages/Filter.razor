@@ -33,7 +33,7 @@
             <!-- Add more filter controls here following the same pattern -->
             <div class="col-md-6 col-lg-4">
                 <label for="aantalWoonlagen" class="form-label">Aantal woonlagen</label>
-                <select id="aantalWoonlagen" class="form-select" @bind="SelectedAantalWoonlagen">
+                <select id="aantalWoonlagen" class="form-select p2" @bind="SelectedAantalWoonlagen">
                     <option value="">-- Selecteer aantal --</option>
                     @foreach (var type in Enum.GetValues<AantalWoonlagenDto>())
                     {
@@ -44,9 +44,20 @@
 
             <div class="col-md-6 col-lg-4">
                 <label for="gebruikOpenHaard" class="form-label">Gebruik open haard</label>
-                <select id="gebruikOpenHaard" class="form-select" @bind="SelectedGebruikOpenHaard">
+                <select id="gebruikOpenHaard" class="form-select p2" @bind="SelectedGebruikOpenHaard">
                     <option value="">-- Selecteer gebruik --</option>
                     @foreach (var type in Enum.GetValues<GebruikOpenHaardDto>())
+                    {
+                        <option value="@type">@type</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <label for="gezinssituatie" class="form-label">Gezinssituatie</label>
+                <select id="gezinssituatie" class="form-select p2" @bind="SelectedGezinsSituatie">
+                    <option value="">-- Selecteer gebruik --</option>
+                    @foreach (var type in Enum.GetValues<GezinssituatieDto>())
                     {
                         <option value="@type">@type</option>
                     }

@@ -11,4 +11,6 @@ public partial class Filter : ComponentBase
     private AantalWoonlagenDto? SelectedAantalWoonlagen { get; set; }
 
     private GebruikOpenHaardDto? SelectedGebruikOpenHaard { get; set; }
+
+    private GezinssituatieDto? SelectedGezinsSituatie { get; set; }
 }
