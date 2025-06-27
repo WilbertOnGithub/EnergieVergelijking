@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Arentheym.EnergieVergelijker.Presentation.Pages;
 
-public partial class Chart(Searcher searcher) : ComponentBase
+public partial class Chart(Searcher searcher, Login login) : ComponentBase
 {
     private const string PowerColor = "orange";
     private const string GasColor = "darkblue";
@@ -30,7 +30,7 @@ public partial class Chart(Searcher searcher) : ComponentBase
 
     protected override async Task OnParametersSetAsync()
     {
-        Woningen = searcher.Search(FilterSelection);
+        Woningen = searcher.Search(FilterSelection, login.Code);
         var averageKwh = Woningen.Any() ? (decimal)Woningen.Average(w => w.KiloWattUur) : 0;
         var averageGasUsage = Woningen.Any() ? (decimal)Woningen.Average(w => w.KubiekeMeterGas) : 0;
 

@@ -19,7 +19,7 @@ public class Vergelijker
         return _loggedIn;
     }
 
-    public IReadOnlyList<ClusterWoning> Search([NotNull] SearchFilter filter)
+    public IReadOnlyList<ClusterWoning> Search([NotNull] SearchFilter filter, string optionalCode = "")
     {
         var query = _clusterWoningen.AsQueryable();
 
@@ -59,16 +59,14 @@ public class Vergelijker
             query = query.Where(x => filter.KubiekeMeterGas.Contains(x.KubiekeMeterGas));
         }
 
-        if (!_loggedIn)
-        {
-            return query.ToList().AsReadOnly();
-        }
-
         // Haal eigen woning uit zoekresultaat en plaats deze als eerste in de lijst
         var result = query.ToList();
-        var eigenWoning = _clusterWoningen.Single(x => x.Code == _code);
-        result.Remove(eigenWoning);
-        result.Insert(0, eigenWoning);
+        if (!string.IsNullOrEmpty(optionalCode))
+        {
+            var eigenWoning = _clusterWoningen.Single(x => x.Code == optionalCode);
+            result.Remove(eigenWoning);
+            result.Insert(0, eigenWoning);
+        }
 
         return result.ToList().AsReadOnly();
     }

@@ -23,7 +23,7 @@ public class SearchFilterTests
         var result = sut.Search(filter);
 
         // Assert
-        result.Count.Should().Be(20);
+        result.Count.Should().Be(21);
     }
 
     [Fact]
@@ -37,7 +37,7 @@ public class SearchFilterTests
         var result = sut.Search(filter);
 
         // Assert
-        result.Count.Should().Be(27);
+        result.Count.Should().Be(28);
     }
 
     [Fact]
@@ -98,7 +98,7 @@ public class SearchFilterTests
         SearchFilter filter = new() { KubiekeMeterGas = new Range<int>(min, max) };
 
         // Act
-        var result = sut.Search(filter);
+        var result = sut.Search(filter, code);
 
         // Assert
         result.Count.Should().Be(1);
@@ -116,10 +116,10 @@ public class SearchFilterTests
         SearchFilter filter = new();
 
         // Act
-        var result = sut.Search(filter);
+        var result = sut.Search(filter, code);
 
         // Assert
-        result.Count.Should().Be(27);
+        result.Count.Should().Be(28);
         result[0].Code.Should().Be(code);
     }
 }
