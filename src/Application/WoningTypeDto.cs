@@ -5,6 +5,6 @@
 /// </summary>
 public enum WoningTypeDto
 {
-    TussenWoning,
-    HoekWoning,
+    Tussenwoning,
+    Hoekwoning,
 }
