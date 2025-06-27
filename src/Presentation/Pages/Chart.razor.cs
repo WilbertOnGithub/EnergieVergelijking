@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Arentheym.EnergieVergelijker.Presentation.Pages;
 
-public partial class Chart(Login login) : ComponentBase
+public partial class Chart(Searcher searcher) : ComponentBase
 {
     private ApexChart<ClusterWoningDto>? chart;
 
@@ -17,14 +17,15 @@ public partial class Chart(Login login) : ComponentBase
     [Parameter]
     public SearchFilterDto FilterSelection { get; set; } = new();
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        Woningen = login.Search(FilterSelection);
+        Woningen = searcher.Search(FilterSelection);
+        await Task.CompletedTask;
     }
 
     protected override async Task OnParametersSetAsync()
     {
-        Woningen = login.Search(FilterSelection);
+        Woningen = searcher.Search(FilterSelection);
         if (chart != null)
         {
             await chart.UpdateSeriesAsync();

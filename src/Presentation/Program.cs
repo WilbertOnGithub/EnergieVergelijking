@@ -18,6 +18,7 @@ internal static class Program
 
         builder.Services.AddApexCharts();
         builder.Services.AddSingleton<Login>();
+        builder.Services.AddSingleton<Searcher>();
         builder.Services.AddScoped(sp => new HttpClient {BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)});
 
         await builder.Build().RunAsync();
