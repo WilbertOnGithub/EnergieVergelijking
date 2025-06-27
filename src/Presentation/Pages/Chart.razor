@@ -8,11 +8,13 @@
                      Name="Kilowattuur"
                      SeriesType="SeriesType.Bar"
                      XValue="@(e => e.Code)"
+                     ShowDataLabels="true"
                      YValue="@(e => e.KiloWattUur)" />
     <ApexPointSeries TItem="ClusterWoningDto"
                      Items="Woningen"
                      Name="Kubieke meter gas"
                      SeriesType="SeriesType.Bar"
+                     ShowDataLabels="true"
                      XValue="@(e => e.Code)"
                      YValue="@(e => e.KubiekeMeterGas)" />
 </ApexChart>
