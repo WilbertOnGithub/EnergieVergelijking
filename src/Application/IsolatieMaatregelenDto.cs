@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Arentheym.EnergieVergelijker.Domain;
+namespace Arentheym.EnergieVergelijker.Application;
 
 [Flags]
 [SuppressMessage("Usage", "CA1008:Enums should have zero value", Justification = "Translated to Dutch.")]

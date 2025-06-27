@@ -1,10 +1,10 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using Arentheym.EnergieVergelijker.Application;
 
 using Microsoft.AspNetCore.Components;
 
 namespace Presentation.Pages;
 
-public partial class EnterCode(NavigationManager navigationManager, Application.Login login) : ComponentBase
+public partial class EnterCode(NavigationManager navigationManager, Login login) : ComponentBase
 {
     private string Code { get; set; } = string.Empty;
     private string ErrorMessage { get; set; } = string.Empty;

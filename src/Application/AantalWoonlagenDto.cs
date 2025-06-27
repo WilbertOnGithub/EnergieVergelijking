@@ -1,4 +1,4 @@
-﻿namespace Arentheym.EnergieVergelijker.Domain;
+﻿namespace Arentheym.EnergieVergelijker.Application;
 
 /// <summary>
 /// Aantal woonlagen van de woning

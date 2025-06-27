@@ -1,6 +1,4 @@
-﻿using Arentheym.EnergieVergelijker.Domain;
-
-namespace Arentheym.EnergieVergelijker;
+﻿namespace Arentheym.EnergieVergelijker.Application;
 
 public class SearchFilterDto
 {

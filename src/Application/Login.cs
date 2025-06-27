@@ -1,7 +1,6 @@
-﻿using Arentheym.EnergieVergelijker;
-using Arentheym.EnergieVergelijker.Domain;
+﻿using Arentheym.EnergieVergelijker.Domain;
 
-namespace Application;
+namespace Arentheym.EnergieVergelijker.Application;
 
 public class Login
 {

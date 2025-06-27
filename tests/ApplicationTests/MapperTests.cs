@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-using Arentheym.EnergieVergelijker;
+using Arentheym.EnergieVergelijker.Application;
 using Arentheym.EnergieVergelijker.Domain;
 
 using AutoFixture;

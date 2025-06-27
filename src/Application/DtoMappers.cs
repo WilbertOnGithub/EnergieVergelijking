@@ -2,7 +2,7 @@
 
 using Riok.Mapperly.Abstractions;
 
-namespace Arentheym.EnergieVergelijker;
+namespace Arentheym.EnergieVergelijker.Application;
 
 [Mapper(EnumMappingStrategy = EnumMappingStrategy.ByValue)]
 public partial class ClusterWoningMapper
