@@ -3,7 +3,6 @@
 public class Vergelijker
 {
     private readonly List<ClusterWoning> _clusterWoningen = [];
-    private bool _loggedIn;
     private string _code = string.Empty;
 
     public Vergelijker()
@@ -14,9 +13,7 @@ public class Vergelijker
     public bool CodeExists(string code)
     {
         _code = code;
-        _loggedIn =
-            _clusterWoningen.FirstOrDefault(x => x.Code.Equals(code, StringComparison.OrdinalIgnoreCase)) != null;
-        return _loggedIn;
+        return _clusterWoningen.FirstOrDefault(x => x.Code.Equals(code, StringComparison.OrdinalIgnoreCase)) != null;
     }
 
     public IReadOnlyList<ClusterWoning> Search([NotNull] SearchFilter filter, string optionalCode = "")

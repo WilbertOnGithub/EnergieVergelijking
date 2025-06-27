@@ -13,7 +13,7 @@ namespace DomainTests;
 public class SearchFilterTests
 {
     [Fact]
-    public void Current_Dataset_Contains_20_Results_When_Searching_For_Glas_Isolatie_Maatregelen_Only()
+    public void Current_Dataset_Contains_Expected_Results_When_Searching_For_Glas_Isolatie_Maatregelen_Only()
     {
         // Arrange
         var sut = new Vergelijker();
@@ -88,13 +88,12 @@ public class SearchFilterTests
 
     [Theory]
     [InlineData(0, 0)]
-    public void Search_With_Extreme_GasUsage_When_Logged_In_Should_Only_Return_Own_Home(int min, int max)
+    public void Search_With_Extreme_GasUsage_Should_Only_Return_Own_Home(int min, int max)
     {
         // Arrange
         const string code = "w4i572";
 
         var sut = new Vergelijker();
-        sut.CodeExists(code);
         SearchFilter filter = new() { KubiekeMeterGas = new Range<int>(min, max) };
 
         // Act
@@ -106,13 +105,12 @@ public class SearchFilterTests
     }
 
     [Fact]
-    public void Searching_When_Logged_In_Should_Put_Own_Home_First()
+    public void Searching_Should_Put_Own_Home_First()
     {
         // Arrange
         const string code = "w4i572";
 
         var sut = new Vergelijker();
-        sut.CodeExists(code);
         SearchFilter filter = new();
 
         // Act
