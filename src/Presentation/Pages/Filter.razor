@@ -28,7 +28,7 @@
                         <input class="form-check-input" type="checkbox" id="isolatie-@maatregel"
                                checked="@SelectedIsolatieMaatregelen.HasFlag(maatregel)"
                                @onchange="() => ToggleIsolatieMaatregel(maatregel)"/>
-                        <label class="form-check-label" for="isolatie-@maatregel">@maatregel</label>
+                        <label class="form-check-label" for="isolatie-@maatregel">@maatregel.GetDescription()</label>
                     </div>
                 }
             </div>
@@ -38,44 +38,44 @@
     <div class="row g-3">
         <div class="col-md-6 col-lg-3">
             <label for="woningType" class="form-label">Type woning</label>
-            <select id="woningType" class="form-select" @bind="SelectedWoningType">
+            <select id="woningType" class="form-select p-2" @bind="SelectedFilterDto.WoningType">
                 <option value="">-- Selecteer een type --</option>
                 @foreach (var type in Enum.GetValues<WoningTypeDto>())
                 {
-                    <option value="@type">@type</option>
+                    <option value="@type">@type.GetDescription()</option>
                 }
             </select>
         </div>
 
         <div class="col-md-6 col-lg-3">
             <label for="aantalWoonlagen" class="form-label">Aantal woonlagen</label>
-            <select id="aantalWoonlagen" class="form-select p-2" @bind="SelectedAantalWoonlagen">
+            <select id="aantalWoonlagen" class="form-select p-2" @bind="SelectedFilterDto.AantalWoonlagen">
                 <option value="">-- Selecteer aantal --</option>
                 @foreach (var type in Enum.GetValues<AantalWoonlagenDto>())
                 {
-                    <option value="@type">@type</option>
+                    <option value="@type">@type.GetDescription()</option>
                 }
             </select>
         </div>
 
         <div class="col-md-6 col-lg-3">
             <label for="gebruikOpenHaard" class="form-label">Gebruik open haard</label>
-            <select id="gebruikOpenHaard" class="form-select p-2" @bind="SelectedGebruikOpenHaard">
+            <select id="gebruikOpenHaard" class="form-select p-2" @bind="SelectedFilterDto.GebruikOpenHaard">
                 <option value="">-- Selecteer gebruik --</option>
                 @foreach (var type in Enum.GetValues<GebruikOpenHaardDto>())
                 {
-                    <option value="@type">@type</option>
+                    <option value="@type">@type.GetDescription()</option>
                 }
             </select>
         </div>
 
         <div class="col-md-6 col-lg-3">
             <label for="gezinssituatie" class="form-label">Gezinssituatie</label>
-            <select id="gezinssituatie" class="form-select p-2" @bind="SelectedGezinsSituatie">
+            <select id="gezinssituatie" class="form-select p-2" @bind="SelectedFilterDto.Gezinssituatie">
                 <option value="">-- Selecteer gebruik --</option>
                 @foreach (var type in Enum.GetValues<GezinssituatieDto>())
                 {
-                    <option value="@type">@type</option>
+                    <option value="@type">@type.GetDescription()</option>
                 }
             </select>
         </div>
@@ -90,7 +90,6 @@
 </div>
 
 <div class="container-fluid border rounded p-3">
-    <Chart>
-
+    <Chart FilterSelection="SelectedFilterDto">
     </Chart>
 </div>
