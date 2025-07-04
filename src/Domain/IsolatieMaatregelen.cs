@@ -1,4 +1,4 @@
-﻿namespace Arentheym.EnergieVergelijker.Domain;
+namespace Arentheym.EnergieVergelijker.Domain;
 
 [Flags]
 [SuppressMessage("Usage", "CA1008:Enums should have zero value", Justification = "Translated to Dutch.")]
