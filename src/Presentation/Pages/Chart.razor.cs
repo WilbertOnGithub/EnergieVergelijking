@@ -12,7 +12,7 @@ namespace Arentheym.EnergieVergelijker.Presentation.Pages;
 public partial class Chart(Searcher searcher, Login login) : ComponentBase
 {
     private const string PowerColor = "orange";
-    private const string GasColor = "darkblue";
+    private const string GasColor = "lightblue";
     private readonly CultureInfo dutchCulture = new("en-NL");
 
     private ApexChart<ClusterWoningDto>? chart;
@@ -34,6 +34,14 @@ public partial class Chart(Searcher searcher, Login login) : ComponentBase
         var averageKwh = Woningen.Any() ? (decimal)Woningen.Average(w => w.KiloWattUur) : 0;
         var averageGasUsage = Woningen.Any() ? (decimal)Woningen.Average(w => w.KubiekeMeterGas) : 0;
 
+        options.DataLabels = new DataLabels
+        {
+            Style = new DataLabelsStyle
+            {
+                FontSize = "12",
+                Colors = ["black", "black"]
+            }
+        };
         options.Annotations = new Annotations
         {
             Yaxis =
