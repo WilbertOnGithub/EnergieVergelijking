@@ -46,4 +46,39 @@ public class ClusterWoningDto(string code, int kiloWattUur, int kubiekeMeterGas)
     /// Eventueel extra commentaar
     /// </summary>
     public string Commentaar { get; set; } = String.Empty;
+
+    public IReadOnlyList<string> ToolTipLines()
+    {
+        var lines = new List<string>();
+        lines.Add($"{Gezinssituatie.GetDescription()}");
+        lines.Add($"{WoningType.GetDescription()}");
+        lines.Add($"{AantalWoonlagen.GetDescription()}");
+        lines.Add($"{GebruikOpenHaard.GetDescription()}");
+
+        var isolatieMaatregelen = new List<string>();
+        foreach (IsolatieMaatregelenDto measure in Enum.GetValues<IsolatieMaatregelenDto>())
+        {
+            if (measure == IsolatieMaatregelenDto.Geen)
+            {
+                continue;
+            }
+
+            if (IsolatieMaatregelen.HasFlag(measure))
+            {
+                isolatieMaatregelen.Add($"- {measure.GetDescription()}");
+            }
+        }
+
+        if (isolatieMaatregelen.Count > 0)
+        {
+            lines.AddRange(isolatieMaatregelen);
+        }
+        if (!string.IsNullOrEmpty(Commentaar))
+        {
+            lines.Add("Commentaar");
+            lines.Add($"{Commentaar}");
+        }
+
+        return lines;
+    }
 }

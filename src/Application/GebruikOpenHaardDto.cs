@@ -7,8 +7,8 @@ namespace Arentheym.EnergieVergelijker.Application;
 /// </summary>
 public enum GebruikOpenHaardDto
 {
-    [Description("Ja")]
+    [Description("Gebruikt open haard")]
     Ja,
-    [Description("Nee")]
+    [Description("Gebruikt geen open haard")]
     Nee, // Of geen open haard
 }

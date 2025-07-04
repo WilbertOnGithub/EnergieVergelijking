@@ -3,18 +3,38 @@
 
 <ApexChart @ref="chart" TItem="ClusterWoningDto" Title="Energiegebruik" Options="options">
 
-    <ApexPointSeries TItem="ClusterWoningDto"
-                     Items="Woningen"
-                     Name="Kilowattuur"
-                     SeriesType="SeriesType.Bar"
-                     XValue="@(e => e.Code)"
-                     ShowDataLabels="true"
-                     YValue="@(e => e.KiloWattUur)" />
-    <ApexPointSeries TItem="ClusterWoningDto"
-                     Items="Woningen"
-                     Name="Kubieke meter gas"
-                     SeriesType="SeriesType.Bar"
-                     ShowDataLabels="true"
-                     XValue="@(e => e.Code)"
-                     YValue="@(e => e.KubiekeMeterGas)" />
+
+    <ApexPointTooltip>
+        <div class="p-3 bg-white rounded shadow-sm border" style="min-width: 220px;">
+            @{
+                var dataPoint = context.DataPoint;
+            }
+            <h5 class="mb-2 text-center">@dataPoint.X</h5>
+            <h5 class="mb-2 text-left">Stroom: @dataPoint.Items.First().KiloWattUur KwH</h5>
+            <h5 class="mb-2 text-left">Gas: @dataPoint.Items.First().KubiekeMeterGas kubieke meter</h5>
+            <div class="mb-2">
+                @foreach (var line in dataPoint.Items.First().ToolTipLines())
+                {
+                    <div>@line</div>
+                }
+            </div>
+        </div>
+    </ApexPointTooltip>
+
+    <ChildContent>
+        <ApexPointSeries TItem="ClusterWoningDto"
+                         Items="Woningen"
+                         Name="Kilowattuur"
+                         SeriesType="SeriesType.Bar"
+                         XValue="@(e => e.Code)"
+                         ShowDataLabels="true"
+                         YValue="@(e => e.KiloWattUur)" />
+        <ApexPointSeries TItem="ClusterWoningDto"
+                         Items="Woningen"
+                         Name="Kubieke meter gas"
+                         SeriesType="SeriesType.Bar"
+                         ShowDataLabels="true"
+                         XValue="@(e => e.Code)"
+                         YValue="@(e => e.KubiekeMeterGas)" />
+    </ChildContent>
 </ApexChart>
