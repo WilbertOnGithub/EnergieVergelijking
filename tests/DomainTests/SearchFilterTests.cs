@@ -120,4 +120,22 @@ public class SearchFilterTests
         result.Count.Should().Be(28);
         result[0].Code.Should().Be(code);
     }
+
+    [Fact]
+    public void Searching_Should_Put_Own_Home_First_Even_If_Own_Home_Would_Be_Filtered_Out()
+    {
+        // Arrange
+        const string code = "n5lvbv";
+
+        var sut = new Vergelijker();
+        SearchFilter filter = new();
+        filter.AantalWoonlagen = AantalWoonlagen.Drie;
+        filter.GebruikOpenHaard = GebruikOpenHaard.Ja;
+
+        // Act
+        var result = sut.Search(filter, code);
+
+        // Assert
+        result[0].Code.Should().Be(code);
+    }
 }
