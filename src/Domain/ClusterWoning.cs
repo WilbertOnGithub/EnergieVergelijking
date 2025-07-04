@@ -1,4 +1,4 @@
-﻿namespace Arentheym.EnergieVergelijker.Domain;
+namespace Arentheym.EnergieVergelijker.Domain;
 
 public class ClusterWoning(string code, int kiloWattUur, int kubiekeMeterGas)
 {

@@ -1,4 +1,4 @@
-﻿namespace Arentheym.EnergieVergelijker.Domain;
+namespace Arentheym.EnergieVergelijker.Domain;
 
 /// <summary>
 /// Maakt gebruik van een open haard

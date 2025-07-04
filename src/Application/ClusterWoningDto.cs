@@ -1,4 +1,4 @@
-﻿namespace Arentheym.EnergieVergelijker.Application;
+namespace Arentheym.EnergieVergelijker.Application;
 
 public class ClusterWoningDto(string code, int kiloWattUur, int kubiekeMeterGas)
 {

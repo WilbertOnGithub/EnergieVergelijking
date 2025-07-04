@@ -1,4 +1,4 @@
-﻿namespace Arentheym.EnergieVergelijker.Domain;
+namespace Arentheym.EnergieVergelijker.Domain;
 
 public class Range<T>
     where T : IComparable<T>

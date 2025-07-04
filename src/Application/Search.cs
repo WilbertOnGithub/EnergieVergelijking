@@ -1,4 +1,4 @@
-﻿using Arentheym.EnergieVergelijker.Domain;
+using Arentheym.EnergieVergelijker.Domain;
 
 namespace Arentheym.EnergieVergelijker.Application;
 
