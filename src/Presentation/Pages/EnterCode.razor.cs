@@ -22,7 +22,7 @@ public partial class EnterCode(NavigationManager navigationManager, Login login)
             return;
         }
 
-        navigationManager.NavigateTo("/filter/");
+        navigationManager.NavigateTo(navigationManager.BaseUri + "filter");
     }
 
     private void HandleReset()
