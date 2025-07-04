@@ -1,36 +1,33 @@
-﻿name: build and test and deploy
+﻿name: Deploy to Github pages
 
 on:
     push:
         branches:
-            - main
-    pull_request:
-        branches:
-            - main
+            - master
 
 jobs:
-    deploy-to-github-pages:
+    deploy:
         runs-on: ubuntu-latest
         steps:
             # Checkout the code
-            -   uses: actions/checkout@v4
+            - uses: actions/checkout@v4
 
-            # Install .NET Core SDK
-            -   name: Setup .NET Core
-                uses: actions/setup-dotnet@v4
-                with:
-                    dotnet-version: 9.0.x
+            # Install .NET SDK
+            - name: Setup .NET SDK
+              uses: actions/setup-dotnet@v4
+              with:
+                  dotnet-version: 9.0.x
+            - name: Install .NET WebAssembly Tools
+              run: dotnet workload install wasm-tools
 
-            # Install dotnet wasm buildtools workload
-            -   name: Install .NET WASM Build Tools
-                run: dotnet workload install wasm-tools
+            # Publish the site
+            - name: Publish
+              run: dotnet publish ./src/Presentation/Presentation.csproj -c:Release -p:GHPages=true -o publish --nologo
 
-            # Publishes Blazor project to the release-folder
-            -   name: Publish .NET Core Project
-                run: dotnet publish ./src/Presentation/Presentation.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
-
-            -   name: Commit wwwroot to GitHub Pages
-                uses: JamesIves/github-pages-deploy-action@v4
-                with:
-                    branch: gh-pages
-                    folder: 'dist/Web/wwwroot'
+            # Deploy the site
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: publish/wwwroot
+                  force_orphan: true
