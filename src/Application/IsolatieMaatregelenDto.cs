@@ -13,7 +13,7 @@ public enum IsolatieMaatregelenDto
     Glas = 1, // Ramen vervangen door HR++ glas
     [Description("Gevel isolatie")]
     Gevel = 2, // Kozijnen / deur vervangen
-    [Description("Spouwmaar isolatie")]
+    [Description("Spouwmuur isolatie")]
     Spouwmuur = 4, // Spouwmuur geïsoleerd
     [Description("Kruipruimte isolatie")]
     Kruipruimte = 8, // Kruipruimte geïsoleerd
